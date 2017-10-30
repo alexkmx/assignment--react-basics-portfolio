@@ -2,7 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/styles.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {HashRouter} from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import registerServiceWorker from './registerServiceWorker';
+import {skills, eduList, jobsList} from './data/datasource';
+
+class AppRouter extends React.Component {
+  render() {
+    return (
+      <HashRouter>
+        <App />
+      </HashRouter>
+    )
+  }
+}
+
+
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 registerServiceWorker();

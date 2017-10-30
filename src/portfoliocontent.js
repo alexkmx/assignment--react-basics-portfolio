@@ -10,6 +10,7 @@ class PortFolioContent extends Component {
         <Header />
         <Summary />
         <ContactInfo />
+        console.log('Portafolio Content');
       </div>
       )
     }
